@@ -1,0 +1,25 @@
+.swiper {
+    width: 100%;
+}
+
+.swiper-pagination-bullet {
+    background: black;
+    height: 4px;
+    width: 4px;
+}
+
+.swiper-pagination-bullet-active {
+    height: 8px;
+    width: 8px;
+}
+
+.swiper-pagination-horizontal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: black;
+}
