@@ -1,4 +1,6 @@
-export interface AreaProps {
+import { TypedObject } from "@portabletext/types";
+
+export interface SingleProduct {
   product: Product;
 }
 
@@ -15,6 +17,8 @@ export interface Size {
 export interface Product {
   colors: Color[];
   description: string;
+  details: TypedObject;
+  fit: TypedObject;
   images?: string[];
   mainImageUrl: string;
   price: string;

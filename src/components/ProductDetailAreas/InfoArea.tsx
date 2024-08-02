@@ -2,7 +2,7 @@ import { useRef } from "react";
 
 import { Box, useMultiStyleConfig } from "@chakra-ui/react";
 
-import { AreaProps } from "../../interfaces/interfaces";
+import { SingleProduct } from "../../interfaces/interfaces";
 
 import {
   ProductDetailCTA,
@@ -11,7 +11,7 @@ import {
   ProductDetailSizes,
 } from "..";
 
-export const InfoArea = ({ product }: AreaProps) => {
+export const InfoArea = ({ product }: SingleProduct) => {
   const infoAreaRef = useRef<HTMLDivElement>(null);
 
   const styles = useMultiStyleConfig("ProductDetail");

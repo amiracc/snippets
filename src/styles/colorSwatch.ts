@@ -20,7 +20,7 @@ const ColorSwatch: ComponentStyleConfig = {
       },
     },
     image: {
-      padding: 0,
+      p: 0,
       borderRadius: "full",
       height: "100%",
     },

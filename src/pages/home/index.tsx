@@ -44,8 +44,9 @@ const Home = () => {
       .then((value: any) => setRecommendProducts(value));
   }, []);
 
-  // Left the data-testid here and in other few places in to highligh that normally we would include tracking.
-  // Also normally here would be all the functionality and translations handled as well
+  console.log("product?.fit", product?.fit);
+  // LOOK: Using a template grid in order to structure my areas on the page. Alternative would have been
+  // to have it defined in Sanity, but at that moment we were using CoreMedia and that's not fun due to Java ;).
   return (
     <Box
       className="sf-product-detail-page"
@@ -56,7 +57,7 @@ const Home = () => {
         areas={{
           stage: <StageArea product={product} />,
           info: <InfoArea product={product} />,
-          details: <DetailsArea />,
+          details: <DetailsArea product={product} />,
           crossStyle: (
             <CrossStyleArea products={crossProducts} product={product} />
           ),

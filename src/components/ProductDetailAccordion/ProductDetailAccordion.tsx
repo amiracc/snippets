@@ -1,10 +1,13 @@
 import { useState } from "react";
 
-import { Accordion, Text, useMultiStyleConfig } from "@chakra-ui/react";
+import { Accordion, useMultiStyleConfig } from "@chakra-ui/react";
+
+import { PortableText } from "@portabletext/react";
 
 import { AccordionItem } from "../../ui/AccordionItem";
+import { SingleProduct } from "../../interfaces/interfaces";
 
-export const ProductDetailAccordion = () => {
+export const ProductDetailAccordion = ({ product }: SingleProduct) => {
   const styles = useMultiStyleConfig("ProductDetailAccordion");
 
   const [isDetailsExpanded, setIsDetailsExpanded] = useState(true);
@@ -31,7 +34,7 @@ export const ProductDetailAccordion = () => {
         id="detailsAccordion"
         onClick={() => handleAccordionToggle("details")}
       >
-        <Text>Details about this product</Text>
+        <PortableText value={product?.details} />
       </AccordionItem>
 
       <AccordionItem
@@ -39,7 +42,7 @@ export const ProductDetailAccordion = () => {
         title={"Fit & Size"}
         onClick={() => handleAccordionToggle("fit")}
       >
-        <Text>Fit and size of this product</Text>
+        <PortableText value={product?.fit} />
       </AccordionItem>
     </Accordion>
   );

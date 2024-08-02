@@ -1,9 +1,11 @@
 # Sanity Studio
 
-Congratulations, you have now installed Sanity Studio, an open-source real-time content editing environment connected to the Sanity Content Lake backend.
+In this demo including Sanity as well, I tried to cover some main parts, kept a basic level:
 
-Now you can do the following things:
+- Structures
+- Schemas
+- Preview
+- Media
+- Theming (colors)
 
-- [Read “getting started” in the docs](https://www.sanity.io/docs/introduction/getting-started?utm_source=readme)
-- [Join the community Slack](https://slack.sanity.io/?utm_source=readme)
-- [Extend and build plugins](https://www.sanity.io/docs/content-studio/extending?utm_source=readme)
+The products come from Sanity, of course when Shopify, Salesforce or any other mean of fetching the products would be implemented, then we either feed Sanity with the products, or we fetch the products directly from the source. I checked and Sanity has an integration with Shopify where your products are automatically updated in Sanity for example.

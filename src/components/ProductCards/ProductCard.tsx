@@ -13,19 +13,20 @@ import { Product } from "../../interfaces/interfaces";
 
 import { ProductPrice } from "..";
 
-export interface CrossStyleProductCardProps {
+export interface ProductCardProps {
   product: Product;
   index: number;
+  variant: "crossStyle" | "scroller";
 }
 
-export const ProductDetailCrossStyleCard = ({
-  product,
-  index,
-}: CrossStyleProductCardProps) => {
+export const ProductCard = ({ product, index, variant }: ProductCardProps) => {
   // This is for placing the cross style products texts at the start of the div container for the top left and right tiles
   const leftAlignedText = index === 0 || index === 1;
 
-  const styles = useMultiStyleConfig("CrossStyle", {
+  const crossStyleVariant = variant === "crossStyle";
+
+  const styles = useMultiStyleConfig("ProductCard", {
+    variant,
     leftAlignedText,
   });
 
@@ -41,7 +42,10 @@ export const ProductDetailCrossStyleCard = ({
           <Text sx={styles.productName} data-testid="product-name">
             {product.title}
           </Text>
-          <ProductPrice leftAlignedText={leftAlignedText} product={product} />
+          <ProductPrice
+            leftAlignedText={crossStyleVariant && leftAlignedText}
+            product={product}
+          />
           <Box sx={styles.addToCartButtonWrapper}>
             <Button
               variant="crossStyle"

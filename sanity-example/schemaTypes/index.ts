@@ -1,4 +1,4 @@
-import {product} from './documents/product'
-import {colorThemeType} from './documents/colorTheme'
+import {product, page, colorThemeType} from './documents'
+import {body} from './blocks'
 
-export const schemaTypes = [product, colorThemeType]
+export const schemaTypes = [product, colorThemeType, page, body]

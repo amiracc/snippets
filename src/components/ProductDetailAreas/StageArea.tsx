@@ -6,11 +6,11 @@ import {
   Image,
 } from "@chakra-ui/react";
 
-import { AreaProps } from "../../interfaces/interfaces";
+import { SingleProduct } from "../../interfaces/interfaces";
 
 import { ProductDetailImageGallerySwiper } from "..";
 
-export const StageArea = ({ product }: AreaProps) => {
+export const StageArea = ({ product }: SingleProduct) => {
   const styles = useMultiStyleConfig("ProductDetail");
 
   return (

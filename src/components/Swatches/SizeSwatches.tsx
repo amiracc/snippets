@@ -8,10 +8,9 @@ import {
 
 export interface SizeSwatchesProps {
   sizes: any;
-  onSizeSelection?: (size: string) => void;
 }
 
-export const SizeSwatches = ({ sizes, onSizeSelection }: SizeSwatchesProps) => {
+export const SizeSwatches = ({ sizes }: SizeSwatchesProps) => {
   const styles = useMultiStyleConfig("SizeSwatches", {
     variant: "sizeSwatch",
   });

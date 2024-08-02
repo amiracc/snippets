@@ -12,7 +12,7 @@ import {
 
 import { Product } from "../../interfaces/interfaces";
 
-import { ProductDetailCrossStyleCard } from "../ProductCards/ProductDetailCrossStyleCard";
+import { ProductCard } from "../ProductCards";
 
 export interface CrossStyleAreaProps {
   product: Product;
@@ -38,9 +38,10 @@ export const CrossStyleArea = ({ products, product }: CrossStyleAreaProps) => {
             {products?.map((product: any, index) => {
               return (
                 <Box key={product.slug}>
-                  <ProductDetailCrossStyleCard
+                  <ProductCard
                     product={product}
                     index={index}
+                    variant="crossStyle"
                   />
                 </Box>
               );

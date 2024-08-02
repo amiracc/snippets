@@ -1,8 +1,16 @@
 import {defineType, defineField, defineArrayMember} from 'sanity'
 
+const GROUPS = [
+  {
+    name: 'editorial',
+    title: 'Editorial',
+  },
+]
+
 export const product = defineType({
   type: 'document',
   name: 'product',
+  groups: GROUPS,
   fields: [
     defineField({
       type: 'string',
@@ -47,6 +55,18 @@ export const product = defineType({
       title: 'Images',
       type: 'array',
       of: [{type: 'image'}],
+    }),
+    defineField({
+      name: 'details',
+      title: 'Details',
+      type: 'body',
+      group: 'editorial',
+    }),
+    defineField({
+      name: 'fit',
+      title: 'Fit & Size',
+      type: 'body',
+      group: 'editorial',
     }),
     defineField({
       name: 'sizes',

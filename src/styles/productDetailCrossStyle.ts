@@ -81,10 +81,10 @@ const CrossStyle: any = {
     },
     cardDetailsFlexContainer: {
       textAlign: { base: "auto", sm: leftAlignedText && "right" },
-      marginTop: { base: 0, sm: "auto" },
+      mt: { base: 0, sm: "auto" },
       flexDirection: "column",
       maxHeight: "none",
-      marginBottom: "0.25rem",
+      mb: "0.25rem",
       display: "flex",
     },
     productName: {

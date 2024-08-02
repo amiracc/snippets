@@ -6,6 +6,7 @@ export interface ResponsiveProps {
   children?: ReactNode;
 }
 
+// LOOK: Just for making it nicer to hide mobile/desktop content/components.
 export const HideOnDesktop = ({ children }: ResponsiveProps) => {
   const styles = useMultiStyleConfig("Responsive");
 

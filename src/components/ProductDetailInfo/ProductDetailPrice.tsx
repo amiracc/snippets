@@ -23,8 +23,8 @@ export const ProductPrice = ({
 
   return (
     <Flex sx={styles.priceContainer}>
-      {/* This is a common technique used in web accessibility if no aria attribute is applicable. */}
-      {/* This will hide the descriptor but is readable for screen readers. */}
+      {/* LOOK: Example of common technique used in web accessibility if no aria attribute is applicable. */}
+      {/* It will hide the descriptor but is readable for screen readers. */}
       <VisuallyHidden>Price</VisuallyHidden>
       <Box sx={styles.price}>
         <Flex sx={styles.priceFlexContainer}>

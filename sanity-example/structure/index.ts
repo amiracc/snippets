@@ -1,6 +1,7 @@
 import {ListItemBuilder, StructureResolver} from 'sanity/structure'
 import colorThemes from './colorThemeStructure'
 import products from './productStructure'
+import pages from './pageStructure.js'
 
 const hiddenDocTypes = (listItem: ListItemBuilder) => {
   const id = listItem.getId()
@@ -9,7 +10,7 @@ const hiddenDocTypes = (listItem: ListItemBuilder) => {
     return false
   }
 
-  return !['colorTheme', 'media.tag', 'product'].includes(id)
+  return !['colorTheme', 'media.tag', 'product', 'page'].includes(id)
 }
 
 export const structure: StructureResolver = (S, context) =>
@@ -17,6 +18,7 @@ export const structure: StructureResolver = (S, context) =>
     .title('Content')
     .items([
       S.divider(),
+      pages(S, context),
       products(S, context),
       S.divider(),
       colorThemes(S, context),

@@ -8,14 +8,13 @@ import {
 
 import { Swiper, SwiperSlide } from "../../ui/SwiperLazy";
 
-import { ProductScrollerCard } from "..";
+import { ProductCard } from "..";
 
 export const ProductScroller = ({
   spaceBetween = 0,
   keyboard = true,
   navigation = true,
   pagination = true,
-  filteredProducts,
   products,
 }) => {
   const styles = useMultiStyleConfig("ProductScroller");
@@ -31,6 +30,7 @@ export const ProductScroller = ({
         <Heading sx={styles.heading}>Recommended products</Heading>
         <Swiper
           slidesPerView={2}
+          // LOOK: Defining breakpoints for responsiveness
           breakpoints={{
             1024: {
               slidesPerView: 4,
@@ -51,7 +51,7 @@ export const ProductScroller = ({
         >
           {products?.map((product, index) => (
             <SwiperSlide key={product.id} onClick={() => {}}>
-              <ProductScrollerCard product={product} index={index} />
+              <ProductCard product={product} index={index} variant="scroller" />
             </SwiperSlide>
           ))}
         </Swiper>

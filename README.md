@@ -20,7 +20,7 @@ Navigate to the root directory of sanity-example:
 
 ### 1. Install Dependencies
 
-### `npm install --legacy-peer-deps`
+### `npm install`
 
 ### 2. Start The Project
 

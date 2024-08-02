@@ -17,6 +17,7 @@ export interface AccordionItemProps extends ChakraAccordionItemProps {
   iconSize?: number;
 }
 
+// LOOK: Redefining the AccordionItem due to different styling. Keeping these kind of components in the ui folder
 export const AccordionItem = ({
   children,
   title,

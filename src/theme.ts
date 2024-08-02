@@ -10,6 +10,7 @@ import PDPTemplate from "./styles/pdpTemplate";
 import ProductDetailAccordion from "./styles/productDetailAccordion";
 import Accordion from "./styles/accordion";
 import ProductScroller from "./styles/productScroller";
+import ProductCard from "./styles/productCard";
 
 const theme = extendTheme({
   components: {
@@ -24,6 +25,7 @@ const theme = extendTheme({
     ProductDetailAccordion,
     Accordion,
     ProductScroller,
+    ProductCard,
   },
 });
 

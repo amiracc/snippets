@@ -1,2 +1,1 @@
-export * from "./ProductDetailCrossStyleCard";
-export * from "./ProductScrollerCard";
+export * from "./ProductCard";

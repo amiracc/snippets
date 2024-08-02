@@ -22,7 +22,7 @@ const SizeSwatches: ComponentStyleConfig = {
         px: 4,
         py: 2,
         width: 16,
-        margin: 0,
+        m: 0,
         fontSize: "xs",
         _active: {
           bg: "black",
