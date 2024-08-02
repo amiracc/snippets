@@ -24,6 +24,7 @@ const Home = () => {
     []
   );
 
+  // LOOK: Fetching sanity content for showing the products. Due to the simplicity of the content a useEffect would be sufficient.
   useEffect(() => {
     client
       .fetch(`${PRODUCTS_QUERY} | order(_createdAt asc)[0]`, {
@@ -44,7 +45,6 @@ const Home = () => {
       .then((value: any) => setRecommendProducts(value));
   }, []);
 
-  console.log("product?.fit", product?.fit);
   // LOOK: Using a template grid in order to structure my areas on the page. Alternative would have been
   // to have it defined in Sanity, but at that moment we were using CoreMedia and that's not fun due to Java ;).
   return (
