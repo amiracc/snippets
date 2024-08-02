@@ -12,7 +12,7 @@ import {
 
 import { Product } from "../../interfaces/interfaces";
 
-import { ProductCard } from "../ProductCards";
+import { ProductCard } from "../ProductCards/ProductCard";
 
 export interface CrossStyleAreaProps {
   product: Product;

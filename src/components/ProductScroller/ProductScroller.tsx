@@ -8,7 +8,7 @@ import {
 
 import { Swiper, SwiperSlide } from "../../ui/SwiperLazy";
 
-import { ProductCard } from "..";
+import { ProductCard } from "../ProductCards/ProductCard";
 
 export const ProductScroller = ({
   spaceBetween = 0,
